@@ -10,8 +10,10 @@ namespace mySuperBank
             Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance}.");
 
             account.MakeWithdrawal(120, DateTime.Now, "Hammock");
+            account.MakeWithdrawal(50, DateTime.Now, "XBox game");
 
-            Console.WriteLine($"New balance: {account.Balance}");
+
+            Console.WriteLine(account.GetAccountHistory());
         }
     }
 }
